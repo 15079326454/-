@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Attendance" table="attendance" schema="network">
+        <id name="attId" column="att_Id">
+            <generator class="native"/>
+        </id>
+        <property name="attName" column="att_Name"/>
+        <property name="attPercen" column="att_Percen"/>
+        <set name="attendanceLogs">
+            <key column="att_Id"/>
+            <one-to-many class="com.hgkj.model.entity.AttendanceLog"/>
+        </set>
+    </class>
+</hibernate-mapping>

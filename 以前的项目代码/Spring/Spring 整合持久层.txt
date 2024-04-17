@@ -1,0 +1,112 @@
+## 第一章、持久层整合
+
+### 1. Spring框架为什么要与持久层技术进行整合
+
+```markdown
+1. JavaEE开发需要持久层进行数据库的访问操作。
+2. JDBC Hibernate MyBatis进行持久开发的过程存在大量的代码涌余
+3. Spring 基于模板设计模式对于上述的持久层技术进行了封装
+```
+
+### 2. Spring可以与哪些持久层技术进行整合？
+
+```markdown
+1. JDBC
+	|-  JDBCTemplate
+2. Hibernate(JPA)
+	|- HibernateTemplate
+3. MyBatis
+	|-SqlSessionFactoryBean MapperScannerConfigure
+```
+
+## 第二章、Spring与MyBatis 整合
+
+### 1.MyBatis开发步骤回顾
+
+```markdown
+1. 实体
+2. 实体别名
+3. 表
+4. 创建Dao接口
+5. 实现Mapper文件
+6. 注册Mapper文件
+7. MyBatisAPI调用
+```
+
+## 2. Spring与 MyBatis 整合的开发步骤
+
+- 配置文件（applicationContext)进行相关配置
+
+  ```markdown
+  <bean id ="dataSource" class=""/>
+  <!--创建SqlSessionFactory-->
+  <bean id="ssfb" class="SqlSessionFactory">
+  	<property name="dataSource" ref=""/>
+  	<property name="typeAliasesPackage">
+  	指定实体类所在的包，com.zlq.mybatis.model.entity.User
+  	</property>
+  	<property name="mapperLocations">
+  	指定 配置文件（映射文件）的路径 还有通用配置
+  	com.zlq.resources.xml/*Mapper.xml
+  	</property>
+  </bean>
+  <!-- DAO接口的实现类
+  session--->session.getMapper() ---xxxDAO实现对象
+  xxxDAO --->xXXDAO
+  -->
+  <bean id="scanner" class="MapperScannerConfigure">
+  <property name="sqlSessionFactoryBeanName" value="ssfb"/>
+  <property name="basePacakge">
+  指定 DAO接口放置的包 com.zlq.model.dao
+  </property>
+  </bean>
+  
+  ```
+
+- 编码
+
+  ```markdown
+  1. 实体
+  2. 表
+  3. 创建Dao接口
+  4. 实现Mapper文件
+  ```
+
+## 3. Spring 与MayBatis整合编码
+
+- 搭建开发环境
+
+  ```java
+  <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>5.2.0.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>2.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>1.1.6</version>
+      </dependency>
+  ```
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

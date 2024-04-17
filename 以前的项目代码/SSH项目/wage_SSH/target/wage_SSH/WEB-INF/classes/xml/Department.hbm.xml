@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Department" table="department" schema="network">
+        <id name="depId" column="dep_Id">
+            <generator class="native"/>
+        </id>
+        <property name="depName" column="dep_Name"/>
+
+        <set name="staffinfo" lazy="false" inverse="true">
+            <key column="dep_Id"/>
+            <one-to-many class="com.hgkj.model.entity.Staffinfo"/>
+        </set>
+    </class>
+</hibernate-mapping>

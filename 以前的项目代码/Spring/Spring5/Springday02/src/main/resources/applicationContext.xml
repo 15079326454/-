@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="userService" class="com.zlq.Proxy.Service.ServiceImpl.UserServiceImpl"/>
+
+    <bean id="orderService" class="com.zlq.Proxy.Service.ServiceImpl.OrderServiceImpl"/>
+
+    <!--    <bean id="before" class="com.zlq.dynamic.Before"/>-->
+    <bean id="around" class="com.zlq.dynamic.Around"/>
+    <aop:config>
+        <!--所有的方法，都作为切入点，加入额外功能，login register两个方法都加入了额外功能       -->
+        <!--        <aop:pointcut id="pc" expression="execution(* *(..))"/>-->
+        <!--方法切入点表达式-->
+        <!--        <aop:pointcut id="pc" expression="execution(* login(String))"/>-->
+        <!--类切入点表达式-->
+        <!--        <aop:pointcut id="pc" expression="execution(* register(com.zlq.Proxy.Entity.User))"/>-->
+        <!--包切入点表达式-->
+        <!--        <aop:pointcut id="pc" expression="execution(* com.zlq.Proxy..*.*(..))"/>-->
+
+        <!--以下是args函数切入点：主要用于函数（方法）参数的匹配-->
+        <!--        <aop:pointcut id="pc" expression="args(String,String)"/>-->
+        <!--winthin函数切入点：主要用于进行类、包切入表达式的匹配-->
+        <!--        <aop:pointcut id="pc" expression="within(*..UserServiceImpl)"/>-->
+        <!--winthin对包的切入点-->
+        <!--        <aop:pointcut id="pc" expression="within(com.zlq.Proxy..*)"/>-->
+        <!--@annotation：为具有特殊注解的方法加额外功能-->
+        <aop:pointcut id="pc" expression="@annotation(com.zlq.Log))"/>
+        <!--        组装：目的把切入点 与 额外功能进行 整合-->
+        <!--        表达的含义：所有的方法都加入before的额外功能-->
+        <aop:advisor advice-ref="around" pointcut-ref="pc"/>
+
+    </aop:config>
+</beans>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    id 属性 名字（唯一的）
+            class 属性  配置全限定名
+    -->
+    <!--<bean id="person" class="Person"/>-->
+    <!--    对应test5的测试，使用person.class时，此处只能有一个person类型-->
+    <!--<bean id="person1" class="Person"/>-->
+
+    <bean id="person" class="com.zlq.basic.entity.Person" p:name="小黑" p:id="200"/>
+
+    <!--        <property name="emails">
+                <list>
+                    <value>suns@zzz.com.cn</value>
+                    <value>suns@ss.com.cn</value>
+                    <value>suns@www.com.cn</value>
+                </list>
+            </property>
+            <property name="tels">
+                <set>
+                    <value>1381111</value>
+                    <value>13911112</value>
+                    <value>16688555</value>
+                    <value>16688555</value>
+                    <value>16688555</value>
+                </set>
+            </property>
+            <property name="address">
+                <list>
+                    <value>浙江省</value>
+                    <value>湖北省</value>
+                    <value>北京</value>
+                    <value>天津</value>
+                    <value>天津</value>
+                    <value>天津</value>
+                </list>
+            </property>
+            <property name="qqs">
+                <map>
+                    <entry>
+                        <key>
+                            <value>suns</value>
+                        </key>
+                        <value>2343242342</value>
+                    </entry>
+                    <entry>
+                        <key>
+                            <value>nini</value>
+                        </key>
+                        <value>2343242342</value>
+                    </entry>
+                </map>
+            </property>
+            <property name="p">
+                <props>
+                    <prop key="001">value001</prop>
+                    <prop key="002">valu002</prop>
+                </props>
+            </property>-->
+
+    <bean id="userDao" class="com.zlq.basic.Dao.DaoImpl.UserDaoImpl"/>
+    <!--<bean id="userService" class="UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>-->
+    <!--自定义成员变量的配置-->
+    <bean id="userService" class="com.zlq.basic.Service.ServiceImpl.UserServiceImpl" p:userDao-ref="userDao"/>
+    <!--    通过构造方法给成员变量赋值-注入-->
+    <bean id="customer" class="com.zlq.basic.Constructor.Customer">
+        <!--   1.当构造参数不一致时，通过<constructor-arg>标签个数来区分
+                2.当构造参数个数一样时，通过type指定构造参数中的参数类型，来区分是哪个构造方法-->
+        <constructor-arg type="int">
+            <value>22</value>
+        </constructor-arg>
+        <!--  <constructor-arg>
+              <value>500</value>
+          </constructor-arg>-->
+    </bean>
+    <!--  以下是配置依赖注入，创建复杂对象，数据库连接的内容。  -->
+    <!--    <bean id="conn" class="com.zlq.Factorybean.ConnectionFactoryBean">-->
+    <!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+    <!--        <property name="url" value="jdbc:mysql://localhost:3306/test?useSSL=false"/>-->
+    <!--        <property name="useName" value="root"/>-->
+    <!--        <property name="password" value="admin11"/>-->
+    <!--    </bean>-->
+    <!--
+    这是实例工厂的配置，需先实例化ConnFactory对象，然后才能调用其getConnection()方法
+     <bean id="connFactory" class="com.zlq.Factorybean.ConnectionFactory"/>
+     <bean id="conn" factory-bean="connFactory" factory-method="getConnection"/>-->
+    <!--    以下是静态工厂的配置，无需实例化对象，可直接调用其getConnection()方法-->
+<!--    <bean id="conn" class="com.zlq.Factorybean.StaticConnectionFactory" factory-method="getConnection"/>-->
+    <!--    scope=
+    "singleton"：只会创建一次简单对象，默认值
+    "prototype":每次都会创建新的对象
+    -->
+    <bean id="Account" scope="prototype" class="com.zlq.Scope.Account"/>
+    <!--    对象的生命周期：
+    "singleton"：工厂创建的同时，对象的创建，也就是调用构造方法时，对象就被创建了(若要实现与prototype的效果，则需添加属性：lazy-init=true）
+    "prototype":获取对象的同时，创建对象，ctx.getBean();
+    -->
+    <bean id="product" class="com.zlq.Life.Product" init-method="myInit" destroy-method="myDestroy">
+        <property name="name" value="养乐多"/>
+    </bean>
+
+
+</beans>

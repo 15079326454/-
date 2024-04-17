@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Roles" table="roles" schema="network">
+        <id name="rolesId" column="roles_Id">
+            <generator class="native"/>
+        </id>
+        <property name="rolesName" column="roles_Name"/>
+        <set name="staffinfos" lazy="false" inverse="true" cascade="all">
+            <key column="roles_Id"/>
+            <one-to-many class="com.hgkj.model.entity.Staffinfo"/>
+        </set>
+    </class>
+</hibernate-mapping>

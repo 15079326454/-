@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Employee" table="employee" schema="test">
+        <id name="eId">
+            <column name="EId" sql-type="int(11) unsigned"/>
+            <generator class="native"/>
+        </id>
+        <property name="eName">
+            <column name="EName" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="birthday">
+            <column name="birthday" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="joinDate">
+            <column name="joinDate" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="eNo">
+            <column name="ENo" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <many-to-one name="deparment"
+                     class="com.hgkj.model.entity.Deparment"
+                     column="did"
+                     lazy="false"
+                     cascade="all"
+        />
+
+    </class>
+</hibernate-mapping>

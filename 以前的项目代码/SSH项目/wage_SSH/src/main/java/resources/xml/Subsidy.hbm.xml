@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Subsidy" table="subsidy" schema="network">
+        <id name="subsidyId" column="subsidy_Id">
+            <generator class="native"/>
+        </id>
+        <property name="subsidyName" column="subsidy_Name"/>
+        <property name="subsidyMoney" column="subsidy_Money"/>
+        <set name="subsidyLogs" cascade="all" lazy="false" inverse="true">
+            <key column="subsidy_Id"/>
+            <one-to-many class="com.hgkj.model.entity.SubsidyLog"/>
+        </set>
+    </class>
+</hibernate-mapping>

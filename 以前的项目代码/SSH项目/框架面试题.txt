@@ -1,0 +1,306 @@
+一、用自己的话简要阐述struts2的执行流程。 
+
+
+Struts 2框架本身大致可以分为3个部分：核心控制器FilterDispatcher、业务控制器Action和用户实现的企业业务逻辑组件。
+核心控制器FilterDispatcher是Struts 2框架的基础，包含了框架内部的控制流程和处理机制。
+业务控制器Action和业务逻辑组件是需要用户来自己实现的。用户在开发Action和业务逻辑组件的同时，还需要编写相关的配置文件，供核心控制器FilterDispatcher来使用。 
+Struts 2的工作流程相对于Struts 1要简单，与WebWork框架基本相同，所以说Struts 2是WebWork的升级版本。基本简要流程如下：
+1、客户端浏览器发出HTTP请求。
+2、根据web.xml配置，该请求被FilterDispatcher接收。3、
+根据struts.xml配置，找到需要调用的Action类和方法， 并通过IoC方式，将值注入给Aciton。
+4、Action调用业务逻辑组件处理业务逻辑，这一步包含表单验证。
+5、Action执行完毕，根据struts.xml中的配置找到对应的返回结果result，并跳转到相应页
+ 
+
+二、谈谈struts2的工作原理：
+ 
+一个请求在Struts2框架中的处理大概分为以下几个步骤 
+1 客户端初始化一个指向Servlet容器（例如Tomcat）的请求 
+2 这个请求经过一系列的过滤器（Filter）（这些过滤器中有一个叫做ActionContextCleanUp的可选过滤器，这个过滤器对于Struts2和其他框架的集成很有帮助，例如：SiteMesh Plugin） 
+3 接着FilterDispatcher被调用，FilterDispatcher询问ActionMapper来决定这个请是否需要调用某个Action 
+4 如果ActionMapper决定需要调用某个Action，FilterDispatcher把请求的处理交给ActionProxy 
+5 ActionProxy通过Configuration Manager询问框架的配置文件，找到需要调用的Action类 
+6 ActionProxy创建一个ActionInvocation的实例。 
+7 ActionInvocation实例使用命名模式来调用，在调用Action的过程前后，涉及到相关拦截器（Intercepter）的调用。 
+8 一旦Action执行完毕，ActionInvocation负责根据struts.xml中的配置找到对应的返回结果。
+返回结果通常是（但不总是，也可 能是另外的一个Action链）一个需要被表示的JSP或者FreeMarker的模版。在表示的过程中可以使用Struts2 框架中继承的标签。
+在这个过程中需要涉及到ActionMapper 
+
+在上述过程中所有的对象（Action，Results，Interceptors，等）都是通过ObjectFactory来创建的。
+
+
+ 
+
+
+五、Hibernate工作原理：
+
+读取并解析配置文件 
+读取并解析映射信息，创建SessionFactory 
+打开Sesssion 
+创建事务Transation 
+持久化操作 
+提交事务 
+关闭Session 
+关闭SesstionFactory 
+
+
+六、Hibernate有什么好处：
+
+
+对JDBC访问数据库的代码做了封装，大大简化了数据访问层繁琐的重复性代码。 
+Hibernate是一个基于JDBC的主流持久化框架，是一个优秀的ORM实现。他很大程度的简化DAO层的编码工作 
+hibernate使用Java反射机制，而不是字节码增强程序来实现透明性。 
+hibernate的性能非常好，因为它是个轻量级框架。映射的灵活性很出色。它支持各种关系数据库，从一对一到多对多的各种复杂关系。
+
+
+
+七、Hibernate是如何延迟加载的：
+
+
+
+1. Hibernate2延迟加载实现：a)实体对象 b)集合（Collection）
+2. Hibernate3 提供了属性的延迟加载功能
+当Hibernate在查询数据的时候，数据并没有存在与内存中，当程序真正对数据的操作时，对象才存在与内存中，就实现了延迟加载，他节省了服务器的内存开销，从而提高了服务器的性能。
+3．Hibernate中怎样实现类之间的关系?(如：一对多、多对多的关系)
+类与类之间的关系主要体现在表与表之间的关系进行操作，它们都市对对象进行操作，我们程序中把所有的表与类都映射在一起，它们通过配置文件中的many-to-one、one-to-many、many-to-many、
+
+
+
+八、Hibernate的查询方式：
+Sql、Criteria,object comptosition 
+Hql： 
+
+属性查询 
+参数查询、命名参数查询 
+关联查询 
+分页查询 
+统计函数 
+
+
+
+九、说下Hibernate的缓存机制
+1. 内部缓存存在Hibernate中又叫一级缓存，属于应用事物级缓存
+2. 二级缓存：
+a) 应用及缓存
+b) 分布式缓存
+条件：数据不会被第三方修改、数据大小在可接受范围、数据更新频率低、同一数据被系统频繁使用、非 关键数据
+c) 第三方缓存的实现
+
+
+
+十、如何优化Hibernate:
+ 
+a)应用及缓存 
+b)分布式缓存 
+条件：数据不会被第三方修改、数据大小在可接受范围、数据更新频率低、同一数据被系统频繁使用、非关键数据 
+c) 第三方缓存的实现 
+
+
+十二、spring工作原理：
+
+1.spring mvc请所有的请求都提交给DispatcherServlet,它会委托应用系统的其他模块负责负责对请求进行真正的处理工作。
+2.DispatcherServlet查询一个或多个HandlerMapping,找到处理请求的Controller. 
+3.DispatcherServlet请请求提交到目标Controller 
+4.Controller进行业务逻辑处理后，会返回一个ModelAndView 
+5.Dispathcher查询一个或多个ViewResolver视图解析器,找到ModelAndView对象指定的视图对象 
+6.视图对象负责渲染返回给客户端。
+
+
+十三、为什么要用spring:
+
+AOP 让开发人员可以创建非行为性的关注点，称为横切关注点，并将它们插入到应用程序代码中。使用 AOP 后，公共服务  
+ （比 如日志、持久性、事务等）就可以分解成方面并应用到域对象上，同时不会增加域对象的对象模型的复杂性。 
+
+IOC 允许创建一个可以构造对象的应用环境，然后向这些对象传递它们的协作对象。正如单词 倒置 所表明的，IOC 就像反      
+过来的 JNDI。没有使用一堆抽象工厂、服务定位器、单元素（singleton）和直接构造（straight construction），每一个对象都是用其协作对象构造的。因此是由容器管理协作对象（collaborator）。 
+
+Spring即使一个AOP框架，也是一IOC容器。 Spring 最好的地方是它有助于您替换对象。有了 Spring，只要用 JavaBean 属性和配置文件加入依赖性（协作对象）。
+然后可以很容易地在需要时替换具有类似接口的协作对象。 
+
+
+
+
+十四、请你谈谈SSH整合：
+
+SSH：
+Struts（表示层）+Spring（业务层）+Hibernate（持久层）
+Struts：
+Struts是一个表示层框架，主要作用是界面展示，接收请求，分发请求。
+在MVC框架中，Struts属于VC层次，负责界面表现，负责MVC关系的分发。（View：沿用JSP）
+Hibernate：
+Hibernate是一个持久层框架，它只负责与关系数据库的操作。
+Spring：
+Spring是一个业务层框架，是一个整合的框架，能够很好地黏合表示层与持久层。
+
+
+
+十五、介绍一下Spring的事务管理： 
+
+事务就是对一系列的数据库操作（比如插入多条数据）进行统一的提交或回滚操作，如果插入成功，那么一起成功，如果中间有一条出现异常，那么回滚之前的所有操作。
+这样可以防止出现脏数据，防止数据库数据出现问题。
+开发中为了避免这种情况一般都会进行事务管理。Spring中也有自己的事务管理机制，一般是使用TransactionMananger进行管理，可以通过Spring的注入来完成此功能。
+
+
+
+
+spring提供的事务管理可以分为两类：编程式的和声明式的。编程式的，比较灵活，但是代码量大，存在重复的代码比较多；声明式的比编程式的更灵活。
+
+编程式主要使用transactionTemplate。省略了部分的提交，回滚，一系列的事务对象定义，需注入事务管理对象.
+
+
+十六、Spring里面如何配置数据库驱动？
+
+使用”org.springframework.jdbc.datasource.DriverManagerDataSource”数据源来配置数据库驱动。示例如下：
+<bean id=”dataSource”>
+    <property name=”driverClassName”>
+        <value>org.hsqldb.jdbcDriver</value>
+    </property>
+    <property name=”url”>
+        <value>jdbc:hsqldb:db/appfuse</value>
+    </property>
+    <property name=”username”><value>sa</value></property>
+    <property name=”password”><value></value></property>
+</bean>
+
+
+十七、Spring里面applicationContext.xml文件能不能改成其他文件名？
+
+ContextLoaderListener是一个ServletContextListener, 它在你的web应用启动的时候初始化。
+缺省情况下， 它会在WEB-INF/applicationContext.xml文件找Spring的配置。 你可以通过定义一个<context-param>元素名字为”contextConfigLocation”来改变Spring配置文件的位置。示例如下：
+
+<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/xyz.xml</param-value>
+    </context-param>
+    </listener-class>
+</listener>
+
+
+十八、如何在web应用里面配置spring?
+
+在web.xml中加入如下同容,在启动web服务器时加载/WEB-INF/applicationContext.xml中的内容。
+<servlet>
+<servlet-name>context</servlet-name>
+<servlet-class>
+org.springframework.web.context.ContextLoaderServlet
+</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+通过如下类得到ApplicationContext实例
+    WebApplicationContextUtils.getWebApplicationContext
+
+
+十九、Spring里面如何定义hibernate mapping？
+
+添加hibernate mapping 文件到web/WEB-INF目录下的applicationContext.xml文件里面。示例如下：
+<property name=”mappingResources”>
+    <list>
+        <value>org/appfuse/model/User.hbm.xml</value>
+    </list>
+</property>
+
+二十、解释一下Dependency injection(DI,依赖注入)和IOC(Inversion of control,控制反转)?
+
+依赖注入DI是一个程序设计模式和架构模型， 一些时候也称作控制反转，尽管在技术上来讲，依赖注入是一个IOC的特殊实现，
+依赖注入是指一个对象应用另外一个对象来提供一个特殊的能力，例如：把一个数据库连接已参数的形式传到一个对象的结构方法里面而不是在那个对象内部自行创建一个连接。
+控制反转和依赖注入的基本思想就是把类的依赖从类内部转化到外部以减少依赖
+应用控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体，将其所依赖的对象的引用，传递给它。也可以说，依赖被注入到对象中。
+所以，控制反转是，关于一个对象如何获取他所依赖的对象的引用，这个责任的反转。
+
+
+
+二十一、spring中的BeanFactory与ApplicationContext的作用有哪些？
+
+1. BeanFactory负责读取bean配置文档，管理bean的加载，实例化，维护bean之间的依赖关系，负责bean的声明周期。
+2. ApplicationContext除了提供上述BeanFactory所能提供的功能之外，还提供了更完整的框架功能：
+
+a. 国际化支持
+b. 资源访问：Resource rs = ctx. getResource(”classpath:config.properties”), “file:c:/config.properties”
+c. 事件传递：通过实现ApplicationContextAware接口
+3. 常用的获取ApplicationContext的方法：
+FileSystemXmlApplicationContext：从文件系统或者url指定的xml配置文件创建，参数为配置文件名或文件名数组
+ClassPathXmlApplicationContext：从classpath的xml配置文件创建，可以从jar包中读取配置文件
+WebApplicationContextUtils：从web应用的根目录读取配置文件，需要先在web.xml中配置，可以配置监听器或者servlet来实现
+
+
+
+二十二、spring中的核心类有那些，各有什么作用?
+
+BeanFactory：产生一个新的实例，可以实现单例模式
+BeanWrapper：提供统一的get及set方法
+ApplicationContext:提供框架的实现，包括BeanFactory的所有功能
+
+
+
+二十三、什么是aop，aop的作用是什么?
+
+面向切面编程（AOP）提供另外一种角度来思考程序结构，通过这种方式弥补了面向对象编程（OOP）的不足
+除了类（classes）以外，AOP提供了切面。切面对关注点进行模块化，例如横切多个类型和对象的事务管理
+Spring的一个关键的组件就是AOP框架，可以自由选择是否使用AOP
+提供声明式企业服务，特别是为了替代EJB声明式服务。最重要的服务是声明性事务管理，这个服务建立在Spring的抽象事物管理之上
+允许用户实现自定义切面，用AOP来完善OOP的使用
+可以把Spring AOP看作是对Spring的一种增强
+
+
+
+二十四、使用Spring有什么好处？
+
+◆Spring能有效地组织你的中间层对象,无论你是否选择使用了EJB。如果你仅仅使用了Struts或其他的包含了J2EE特有APIs的framework，你会发现Spring关注了遗留下的问题，。
+
+◆Spring能消除在许多工程上对Singleton的过多使用。根据我的经验，这是一个主要的问题，它减少了系统的可测试性和面向对象特性。
+◆Spring能消除使用各种各样格式的属性定制文件的需要,在整个应用和工程中，可通过一种 一致的方法来进行配置。曾经感到迷惑，一个特定类要查找迷幻般的属性关键字或系统属性,为此不得不读Javadoc乃至源编码吗？有了Spring，你可 很简单地看到类的JavaBean属性。倒置控制的使用(在下面讨论)帮助完成这种简化。
+◆Spring能通过接口而不是类促进好的编程习惯，减少编程代价到几乎为零。
+◆Spring被设计为让使用它创建的应用尽可能少的依赖于他的APIs。在Spring应用中的大多数业务对象没有依赖于Spring。
+◆使用Spring构建的应用程序易于单元测试。
+◆Spring能使EJB的使用成为一个实现选择,而不是应用架构的必然选择。你能选择用POJOs或local EJBs来实现业务接口，却不会影响调用代码。
+◆Spring帮助你解决许多问题而无需使用EJB。Spring能提供一种EJB的替换物，它们适于许多web应用。例如,Spring能使用AOP提供声明性事务而不通过使用EJB容器，如果你仅仅需要与单个的数据库打交道，甚至不需要JTA实现。
+■Spring为数据存取提供了一致的框架,不论是使用JDBC或O/R mapping产品（如Hibernate）。
+Spring确实使你能通过最简单可行的解决办法解决你的问题。这些特性是有很大价值的。
+总结起来，Spring有如下优点：
+◆低侵入式设计，代码污染极低
+◆ 独立于各种应用服务器，可以真正实现Write Once,Run Anywhere的承诺
+◆Spring的DI机制降低了业务对象替换的复杂性
+◆Spring并不完全依赖于Spring，开发者可自由选用Spring框架的部分或全部
+
+
+
+
+
+二十七、你对MVC的理解，MVC有什么优缺点？结合Struts，说明在一个Web应用如何去使用？
+答：
+MVC设计模式（应用观察者模式的框架模式）
+M: Model(Business process layer)，模型，操作数据的业务处理层,并独立于表现层
+(Independent of presentation)。
+V: View(Presentation layer)，视图，通过客户端数据类型显示数据,并回显模型层的执
+行结果。
+C: Controller(Control layer)，控制器，也就是视图层和模型层桥梁，控制数据的流向，
+接受视图层发出的事件，并重绘视图
+MVC框架的一种实现模型
+模型二(Servlet-centric)：
+JSP+Servlet+JavaBean，以控制为核心，JSP只负责显示和收集数据，Sevlet，连接视图
+和模型，将视图层数据，发送给模型层，JavaBean，分为业务类和数据实体，业务类处
+理业务数据，数据实体，承载数据，基本上大多数的项目都是使用这种MVC的实现模式。
+StrutsMVC框架(Web application frameworks)
+Struts是使用MVC的实现模式二来实现的，也就是以控制器为核心。
+Struts提供了一些组件使用MVC开发应用程序：
+Model：Struts 没有提供model 类。这个商业逻辑必须由Web 应用程序的开发者以
+JavaBean或EJB的形式提供
+
+
+
+二十八、ajax是什么及其工作原理？ 
+AJAX 
+
+Ajax 由 HTML、JavaScript? 技术、DHTML 和 DOM 组成，这一杰出的方法可以将笨拙的 Web 界面转化成交互性的 Ajax 应用程序。
+AJAX最核心的一个对象是XMLHttpRequest，所有的Ajax操作都离不开对这个对象的操作
+XMLHttpRequest对象相关方法:
+打开请求
+XMLHttpRequest.open(传递方式,地址,是否异步请求)
+准备就绪执行
+XMLHttpRequest.onreadystatechange
+获取执行结果
+XMLHttpRequest.responseText
+
+

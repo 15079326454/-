@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--Spring创建MyDateConverter类型对象-->
+ <!--   <bean id="myDateConverter" class="com.zlq.Converter.MyDateConverter">
+        <property name="pattern" value="yyyy-MM-dd"/>
+    </bean>
+    &lt;!&ndash;    告诉Spring框架，我们创建的MyDateConverter是一个类型转换器，用于注册转换器&ndash;&gt;
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <ref bean="myDateConverter"/>
+            </set>
+        </property>
+    </bean>-->
+    <bean id="student" class="com.zlq.Converter.Student">
+        <property name="name" value="Nike"/>
+        <property name="birthday" value="2020/12/17"/>
+    </bean>
+</beans>

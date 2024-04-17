@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01e962c0-67ce-4803-ab5e-45be578e8ba2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\SSMS\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lSQBq7EqlJPx5PU7s2XRFi9eO6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Springday03/src/main/resources/log4j.properties" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3494253" />
+    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SSMS\java\Item\Spring\Springday03\src\main\resources\xml" />
+      <recent name="D:\SSMS\java\Item\Spring\Springday03\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zlq" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zlq.Aspect" />
+      <recent name="com.zlq.Proxy.Service.ServiceImpl" />
+      <recent name="com.zlq.Proxy.Service" />
+      <recent name="com.zlq.Proxy.Dao.DaoImpl" />
+      <recent name="com.zlq.Proxy.Dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SSMS\java\Item\Spring\Springday03\src\main\java\com\zlq\mybatis" />
+      <recent name="D:\SSMS\java\Item\Spring\Springday03\src\main\resources" />
+      <recent name="D:\SSMS\java\Item\Spring\Springday02\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestMybatis">
+    <configuration name="TestMybatis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zlq.mybatis.Contorller.TestMybatis" />
+      <module name="Springday03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.mybatis.Contorller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProxy.testAspect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springday02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.TestProxy" />
+      <option name="METHOD_NAME" value="testAspect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProxy.testDynamic01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springday02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.TestProxy" />
+      <option name="METHOD_NAME" value="testDynamic01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProxy.testDynamic02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springday02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.TestProxy" />
+      <option name="METHOD_NAME" value="testDynamic02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProxy.testLoger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springday02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.TestProxy" />
+      <option name="METHOD_NAME" value="testLoger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestMybatis" />
+      <item itemvalue="JUnit.TestProxy.testDynamic02" />
+      <item itemvalue="JUnit.TestProxy.testDynamic01" />
+      <item itemvalue="JUnit.TestProxy.testLoger" />
+      <item itemvalue="JUnit.TestProxy.testAspect" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestMybatis" />
+        <item itemvalue="JUnit.TestProxy.testAspect" />
+        <item itemvalue="JUnit.TestProxy.testDynamic02" />
+        <item itemvalue="JUnit.TestProxy.testDynamic01" />
+        <item itemvalue="JUnit.TestProxy.testLoger" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01e962c0-67ce-4803-ab5e-45be578e8ba2" name="Default Changelist" comment="" />
+      <created>1607587881260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607587881260</updated>
+      <workItem from="1607587882290" duration="264000" />
+      <workItem from="1608191716430" duration="1054000" />
+      <workItem from="1608192905764" duration="4439000" />
+      <workItem from="1608254098209" duration="14801000" />
+      <workItem from="1608528809913" duration="4888000" />
+      <workItem from="1608707595416" duration="6849000" />
+      <workItem from="1608782448246" duration="157000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="511" y="243" key="#Inspections" timestamp="1608711040783">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="511" y="243" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1608711040783" />
+    <state x="480" y="88" key="#Project_Structure" timestamp="1608707757372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="480" y="88" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1608707757372" />
+    <state x="344" y="220" width="1092" height="790" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608711683561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="344" y="220" width="1092" height="790" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608711683561" />
+    <state x="670" y="319" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1608254309457">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="670" y="319" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608254309457" />
+    <state x="632" y="262" key="#com.intellij.ide.util.MemberChooser" timestamp="1608708835105">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="632" y="262" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608708835105" />
+    <state x="418" y="497" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1608192212148">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="418" y="497" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608192212148" />
+    <state x="1026" y="517" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1608256154708">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1026" y="517" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608256154708" />
+    <state x="1147" y="474" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1608256156545">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1147" y="474" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1608256156545" />
+    <state x="822" y="268" key="FileChooserDialogImpl" timestamp="1608782575857">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="822" y="268" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608782575857" />
+    <state x="293" y="261" width="1218" height="756" key="GrepConsoleSettings" timestamp="1608712303766">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="293" y="261" width="1218" height="756" key="GrepConsoleSettings/0.0.1920.1040@0.0.1920.1040" timestamp="1608712303766" />
+    <state width="1429" height="2" key="GridCell.Tab.0.bottom" timestamp="1608715884906">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608715884906" />
+    <state width="1429" height="2" key="GridCell.Tab.0.center" timestamp="1608715884904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608715884904" />
+    <state width="1429" height="2" key="GridCell.Tab.0.left" timestamp="1608715884904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608715884904" />
+    <state width="1429" height="2" key="GridCell.Tab.0.right" timestamp="1608715884905">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608715884905" />
+    <state width="1238" height="101" key="GridCell.Tab.1.bottom" timestamp="1608542563511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1238" height="101" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608542563511" />
+    <state width="1238" height="101" key="GridCell.Tab.1.center" timestamp="1608542563511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1238" height="101" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608542563511" />
+    <state width="1238" height="101" key="GridCell.Tab.1.left" timestamp="1608542563511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1238" height="101" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608542563511" />
+    <state width="1238" height="101" key="GridCell.Tab.1.right" timestamp="1608542563511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1238" height="101" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608542563511" />
+    <state x="609" y="317" key="Maven.ArtifactSearchDialog" timestamp="1608708780434">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="609" y="317" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608708780434" />
+    <state x="444" y="191" key="NewModule_or_Project.wizard" timestamp="1608193828639">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="444" y="191" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1608193828639" />
+    <state x="284" y="113" key="SettingsEditor" timestamp="1608711428580">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="284" y="113" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608711428580" />
+    <state x="433" y="137" key="new project wizard" timestamp="1608782610782">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="433" y="137" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1608782610782" />
+    <state x="690" y="323" width="672" height="678" key="search.everywhere.popup" timestamp="1608538460691">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="323" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608538460691" />
+    <state x="384" y="197" key="spring file set editor" timestamp="1608711357169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="384" y="197" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1608711357169" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Springday02/src/main/java/com/zlq/Proxy/Service/ServiceImpl/UserServiceImpl.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Springday02/src/main/java/com/zlq/Proxy/Service/ServiceImpl/UserServiceImpl.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

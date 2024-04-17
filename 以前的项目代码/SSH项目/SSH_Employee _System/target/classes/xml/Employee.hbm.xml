@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Employee" table="employee" schema="test">
+        <id name="eId" column="EId">
+            <generator class="native"/>
+        </id>
+        <property name="eName" column="EName"/>
+        <property name="sex" column="sex"/>
+        <property name="birthday" column="birthday"/>
+        <property name="joinDate" column="joinDate"/>
+        <property name="eNo" column="ENo"/>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+
+        <!--关系映射-->
+        <many-to-one name="deparment" class="com.hgkj.model.entity.Deparment" column="did"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Reward" table="reward" schema="network">
+        <id name="rewId" column="rew_Id" >
+            <generator class="native"/>
+        </id>
+        <property name="rewName" column="rew_Name"/>
+        <property name="rewPrice" column="rew_price"/>
+     <set name="rewardLogs" lazy="false" cascade="all" inverse="true">
+         <key column="rew_Id"/>
+         <one-to-many class="com.hgkj.model.entity.RewardLog"/>
+     </set>
+    </class>
+</hibernate-mapping>

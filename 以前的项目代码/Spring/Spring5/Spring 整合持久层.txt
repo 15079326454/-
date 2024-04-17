@@ -1,0 +1,33 @@
+## 第一章、持久层整合
+
+### 1. Spring框架为什么要与持久层技术进行整合
+
+```
+1. JavaEE开发需要持久层进行数据库的访问操作。
+2. JDBC Hibernate MyBatis进行持久开发的过程存在大量的代码涌余
+3. Spring 基于模板设计模式对于上述的持久层技术进行了封装
+```
+
+### 2. Spring可以与哪些持久层技术进行整合？
+
+```html
+1. JDBC
+	|-  JDBCTemplate
+2. Hibernate(JPA)
+	|- HibernateTemplate
+3. MyBatis
+	|-SqlSessionFactoryBean MapperScannerConfigure
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

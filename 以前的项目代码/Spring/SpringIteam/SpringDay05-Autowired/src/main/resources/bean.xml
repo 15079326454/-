@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.zlq.model.entity.Cat"/>
+    <bean id="dog1" class="com.zlq.model.entity.Dog"/>
+    <!--    byName：会自动在容器上下文中查找，和自己对象Set方法后面的值对应的bean id-->
+    <!--    byType：会自动在容器上下文中查找，和自己对象属性类型相同的bean-->
+    <bean id="people" class="com.zlq.model.entity.People" autowire="byType">
+        <property name="name" value="小明"/>
+    </bean>
+
+</beans>

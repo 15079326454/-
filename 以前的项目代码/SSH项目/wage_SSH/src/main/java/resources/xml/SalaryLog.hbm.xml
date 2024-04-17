@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.SalaryLog" table="salary_log" schema="network">
+        <id name="sallogId" column="sallog_Id">
+            <generator class="native"/>
+        </id>
+        <property name="staffName" column="staff_Name"/>
+        <property name="shopName" column="shop_Name"/>
+        <property name="levelName" column="level_Name"/>
+        <property name="salTime" column="sal_Time"/>
+        <property name="levelPrice" column="level_Price"/>
+        <property name="attPercent" column="att_Percent"/>
+        <property name="totalSubsidy" column="total_Subsidy"/>
+        <property name="totalReward" column="total_reward"/>
+        <property name="salaryOld" column="salary_Old"/>
+        <property name="salaryTrue" column="salary_True"/>
+        <property name="sallogRemark" column="sallog_Remark"/>
+        <many-to-one name="staffinfo"
+        column="staff_Id"
+                     lazy="false"
+                     class="com.hgkj.model.entity.Staffinfo"
+        />
+    </class>
+</hibernate-mapping>

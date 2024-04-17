@@ -1,0 +1,9 @@
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (1, '章子怡', 'qwerty', 'Beijing', '13788658672');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (2, '郭富城', 'abc123', 'HongKong', '15678909898');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (3, '林志颖', '654321', 'Taiwan', '18612124565');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (4, '梁静茹', '987654367', 'malaixiya', '18912340998');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (5, 'LadyGaGa', '123456', 'America', '13012386565');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (6, '可口', '00000', '浙江绍兴', '12346789456');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (7, 'lelel', '15345', '浙江宁波', '545878');
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (8, '34243', '454564', NULL, NULL);
+INSERT INTO `user`(`ID`, `name`, `password`, `address`, `phone`) VALUES (9, '林悠悠', '123456', NULL, NULL);

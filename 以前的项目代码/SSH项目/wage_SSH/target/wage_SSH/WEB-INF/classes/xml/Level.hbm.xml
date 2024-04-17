@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Level" table="level" schema="network">
+        <id name="levelId" column="level_Id">
+            <generator class="native"/>
+        </id>
+        <property name="levelName" column="level_Name"/>
+        <property name="levelPrice" column="level_Price"/>
+        <set name="staffinfoSet"  lazy="false" inverse="true" cascade="all">
+            <key column="level_Id"/>
+            <one-to-many class="com.hgkj.model.entity.Staffinfo"/>
+        </set>
+    </class>
+</hibernate-mapping>

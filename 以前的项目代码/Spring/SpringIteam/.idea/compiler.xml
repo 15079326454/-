@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringDay03-IOC2" />
+        <module name="SpringDay10-MyBatis" />
+        <module name="SpringDay04-DependencyInjection" />
+        <module name="SpringDay11-Transaction" />
+        <module name="SpringDay01-IOC" />
+        <module name="SpringDay08-Proxy" />
+        <module name="SpringDay09-AOP" />
+        <module name="SpringDay07--JavaConfig" />
+        <module name="SpringDay05-Autowired" />
+        <module name="SpringDay06--anno" />
+        <module name="SpringDay02-HelloSpring" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

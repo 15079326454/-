@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b8bb588-d6da-4940-82a2-979edaa0ba9e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="mybatis-config" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\SSMS\Maven\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1m5gw5HStDvEEPHQpfZfzMc9QBJ" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MybatisDay05/src/main" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.3494253" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MybatisDay05\src\main" />
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MybatisDay05\src\main\resources" />
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MyBatisDay04\src\main\Resources" />
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MyBatisDay04\src\main\java\com\zlq" />
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MybatisDay03\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MyBatisDay04\src\test\java" />
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MybatisDay02\src" />
+      <recent name="D:\SSMS\java\Item\MyBati项目\MybatisItem\MybatisDay01\src\main\java\com\zlq\dao" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zlq" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zlq.utils" />
+      <recent name="java.com.zlq.dao" />
+      <recent name="com.zlq.Mybatis.dao" />
+      <recent name="com.zlq.Mybatis.entity" />
+      <recent name="com.zlq.Mybatis.untils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserMapperTest.deleteUser">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.TestGetUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBatisDay04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="TestGetUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.UserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBatisDay04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="UserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBatisDay04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="addUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBatisDay04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBatisDay04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zlq.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zlq.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.zlq.dao.UserMapperTest" />
+      <option name="METHOD_NAME" value="updateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserMapperTest.deleteUser" />
+        <item itemvalue="JUnit.UserMapperTest.updateUser" />
+        <item itemvalue="JUnit.UserMapperTest.addUser" />
+        <item itemvalue="JUnit.UserMapperTest.UserById" />
+        <item itemvalue="JUnit.UserMapperTest.TestGetUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b8bb588-d6da-4940-82a2-979edaa0ba9e" name="Default Changelist" comment="" />
+      <created>1608789101787</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608789101787</updated>
+      <workItem from="1608789102830" duration="11239000" />
+      <workItem from="1608860156460" duration="13241000" />
+      <workItem from="1609135290684" duration="10316000" />
+      <workItem from="1609836163224" duration="2114000" />
+      <workItem from="1609914897633" duration="5402000" />
+      <workItem from="1609990227283" duration="1235000" />
+      <workItem from="1610343484647" duration="1665000" />
+      <workItem from="1610345428059" duration="364000" />
+      <workItem from="1610347085962" duration="172000" />
+      <workItem from="1610347330362" duration="5365000" />
+      <workItem from="1610433497913" duration="4441000" />
+      <workItem from="1610523707551" duration="3467000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.ibatis.session.defaults.DefaultSqlSession" memberName="executor" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

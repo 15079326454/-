@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/SpringDay01-IOC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay01-IOC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay02-HelloSpring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay02-HelloSpring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay03-IOC2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay03-IOC2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay04-DependencyInjection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay04-DependencyInjection/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay05-Autowired/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay05-Autowired/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay06--anno/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay06--anno/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay07--JavaConfig/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay07--JavaConfig/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay08-Proxy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay08-Proxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay09-AOP/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay09-AOP/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay10-MyBatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay10-MyBatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay11-Transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringDay11-Transaction/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

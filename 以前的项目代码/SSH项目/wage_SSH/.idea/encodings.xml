@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/center.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/DeptList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/bonuslist.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/empAdd.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/empEdit.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/empList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/levelList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/rewardLogList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/rolesList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/salaryAttendanceInfo.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/salaryExport.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/salaryList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/shopList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/subLogList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/subsidyList.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/html/拷贝.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/left.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/top.jsp" charset="GBK" />
+  </component>
+</project>

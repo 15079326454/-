@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Staffinfo" table="staffinfo" schema="network">
+        <id name="staffId" column="staff_Id">
+            <generator class="native"/>
+        </id>
+        <property name="staffPwd" column="staff_Pwd"/>
+        <property name="staffName" column="staff_Name"/>
+        <property name="staffState" column="staff_state"/>
+        <property name="staffSex" column="staff_sex"/>
+        <property name="staffAddress" column="staff_Address"/>
+        <property name="staffTel" column="staff_tel"/>
+        <property name="staffEmail" column="staff_email"/>
+        <!--补贴记录表-->
+        <set name="subsidyLogSet" lazy="false" inverse="true">
+            <key column="staff_Id"/>
+            <one-to-many class="com.hgkj.model.entity.SubsidyLog"/>
+        </set>
+        <!--考勤记录表-->
+        <set name="attendanceLogSet" cascade="all" inverse="true" lazy="false">
+            <key column="staff_Id"/>
+            <one-to-many class="com.hgkj.model.entity.AttendanceLog"/>
+        </set>
+        <!--获奖记录表-->
+        <set name="rewardLogSet" cascade="all" lazy="false" inverse="true">
+            <key column="staff_Id"/>
+            <one-to-many class="com.hgkj.model.entity.RewardLog"/>
+        </set>
+
+        <set name="salaryLogSet" inverse="true" lazy="false" >
+            <key column="staff_Id"/>
+            <one-to-many class="com.hgkj.model.entity.SalaryLog"/>
+        </set>
+
+        <!--等级表-->
+        <many-to-one name="level"
+                     column="level_Id"
+                     class="com.hgkj.model.entity.Level" lazy="false"/>
+        <many-to-one name="roles"
+                     column="roles_Id"
+                     class="com.hgkj.model.entity.Roles"  lazy="false" />
+        <many-to-one name="department"
+                     column="dep_Id"
+                     class="com.hgkj.model.entity.Department" lazy="false"/>
+        <many-to-one name="shop"
+                     class="com.hgkj.model.entity.Shop"
+                     column="shop_Id" lazy="false" />
+
+    </class>
+</hibernate-mapping>

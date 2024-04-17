@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Shop" table="shop" schema="network">
+        <id name="shopId" column="shop_Id">
+            <generator class="native"/>
+        </id>
+        <property name="shopName" column="shop_Name"/>
+        <property name="shopAddress" column="shop_Address"/>
+        <property name="shopState" column="shop_state"/>
+        <property name="shopSupervisor" column="shop_supervisor"/>
+        <property name="shopRemark" column="shop_remark"/>
+        <set name="staffinfoHashSet" inverse="true" lazy="false" cascade="all" >
+            <key column="shop_Id"/>
+            <one-to-many class="com.hgkj.model.entity.Staffinfo"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.SubsidyLog" table="subsidy_log" schema="network">
+        <id name="sublogId" column="sublog_Id">
+            <generator class="native"/>
+        </id>
+        <property name="subsidyMoney" column="subsidy_Money"/>
+        <property name="sublogTime" column="sublog_Time"/>
+        <many-to-one name="staffinfo"
+                     class="com.hgkj.model.entity.Staffinfo"
+                     column="staff_Id"
+                     lazy="false"
+                     cascade="all"
+        />
+        <many-to-one name="subsidy"
+                     column="subsidy_Id"
+                     class="com.hgkj.model.entity.Subsidy"
+                     lazy="false"
+        />
+    </class>
+</hibernate-mapping>

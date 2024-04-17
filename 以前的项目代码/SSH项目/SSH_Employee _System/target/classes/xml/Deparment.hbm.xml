@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hgkj.model.entity.Deparment" table="deparment" schema="test">
+        <id name="dId" column="DId">
+            <generator class="native"/>
+        </id>
+        <property name="dName" column="DName"/>
+        <property name="dDesc" column="DDesc"/>
+        <!--关系映射，一对多-->
+        <set name="employeeSet">
+            <key column="DId"/>
+            <one-to-many class="com.hgkj.model.entity.Employee"/>
+        </set>
+    </class>
+</hibernate-mapping>

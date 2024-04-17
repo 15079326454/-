@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hgkj.model.dao.BlogMapper" >
+  <resultMap id="BlogMap" type="Blog" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="DATE" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <!--多对一的配置这是多的一方-->
+    <association property="author" javaType="Author" select="selectAuthorById" column="author_id"/>
+    <!--一对多的配置，这是一的一方-->
+    <collection property="comments" ofType="Comment" select="selectCommentBlogById" column="id"/>
+  </resultMap>
+  <!--多对一的selectAuthor的查询-->
+  <select id="selectAuthorById" resultType="Author" parameterType="java.lang.Integer">
+    select * from author where id=#{id};
+  </select>
+  <!--一对多的selectComment查询-->
+  <select id="selectCommentBlogById" parameterType="java.lang.Integer" resultType="Comment">
+    select id, blog_id, content, commentDate from comment where blog_id=#{blog.id};
+  </select>
+  <sql id="Base_Column_List" >
+    id, title, content, create_time, type,author_id
+  </sql>
+  <select id="selectBlogById" resultMap="BlogMap" parameterType="java.lang.Integer">
+    select 
+    <include refid="Base_Column_List"/>
+    from blog where id=#{id}
+  </select>
+<insert id="insertBlog" parameterType="Blog" useGeneratedKeys="true" keyProperty="id">
+  insert into blog(title, content, create_time, type,author_id) values (#{title},#{content},#{createTime},#{type},#{author.id})
+</insert>
+  <!--&lt;!&ndash;id="selectById"是与接口中的方法名一致的.resultMap返回结果的集合;如果要用resultType=“Blog”则查询语句中的列要和实体类中的属性一样否则就加别名&ndash;&gt;
+  <select id="selectById" resultType="Blog" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from blog
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  &lt;!&ndash;分页查询&ndash;&gt;
+  <select id="selectFenYe" resultType="Blog"  >
+    select
+    <include refid="Base_Column_List" />
+    from blog limit #{index},#{pageSize}
+  </select>
+  &lt;!&ndash;查询所有内容&ndash;&gt;
+  <select id="selectAllBlog" resultType="Blog" >
+    select
+    <include refid="Base_Column_List" />
+    from blog
+  </select>
+  &lt;!&ndash;模糊查询这里是对标题的模糊查询&ndash;&gt;
+  <select id="selectLike" resultType="Blog" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from blog where title like "%"#{title}"%"
+  </select>
+  &lt;!&ndash;添加内容&ndash;&gt;
+  <insert id="insert" parameterType="Blog" useGeneratedKeys="true" keyProperty="id">
+    insert into blog ( title, content,
+      create_time, type)
+    values (#{title}, #{content},
+      #{createTime}, #{type})
+  </insert>
+  &lt;!&ndash;删除指定的内容&ndash;&gt;
+  <delete id="deleteBlog" parameterType="java.lang.Integer" >
+    delete from blog
+    where id = #{id}
+  </delete>
+  &lt;!&ndash;修改指定内容，注意前者是数据库中的列名，后者是实体类中的属性两者不可弄混&ndash;&gt;
+  <update id="updateBlog" parameterType="Blog">
+    update blog set title=#{title},content=#{content},type=#{type},create_time=#{createTime} where id=#{id}
+  </update>-->
+</mapper>

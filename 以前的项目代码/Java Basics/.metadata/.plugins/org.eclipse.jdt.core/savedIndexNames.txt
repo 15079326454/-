@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+D:\SSMS\java\Item\Java Basics\.metadata\.plugins\org.eclipse.jdt.core
+4258709746.index
+1059005676.index
+2498768845.index
+2825923088.index
+3890376128.index
+4170755562.index
+1372430269.index
+2931441002.index
+2052191965.index
+1633311878.index
+1535802368.index
+661576595.index
+3649545761.index
+3229303491.index
+3288800620.index
+2553570963.index
+1273275872.index
+1923734958.index

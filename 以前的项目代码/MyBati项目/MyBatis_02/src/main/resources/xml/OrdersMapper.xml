@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hgkj.model.dao.OrdersMapper" >
+  <resultMap id="OrdersMap" type="Orders" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_number" property="orderNumber" jdbcType="VARCHAR" />
+    <result column="order_price" property="orderPrice" jdbcType="VARCHAR" />
+    <!--多对一 多指的是订单表,一指的是客户表-->
+    <association property="tcustomer" javaType="Tcustomer" select="selectOrdersById" column="customer_id"/>
+  </resultMap>
+  <!--多对一;对应的select-->
+  <select id="selectOrdersById" resultType="Tcustomer" parameterType="java.lang.Integer">
+    select * from t_customer where id=#{id}
+  </select>
+
+  <sql id="Base_Column_List" >
+    id, order_number, order_price, customer_id
+  </sql>
+<select id="selectOrderById" resultMap="OrdersMap" parameterType="java.lang.Integer">
+  select
+  <include refid="Base_Column_List"/>
+  from t_order where id=#{id}
+</select>
+  <insert id="insertOrders" parameterType="Orders" useGeneratedKeys="true" keyProperty="id">
+    insert into t_order(order_number, order_price, customer_id) values (#{orderNumber},#{orderPrice},#{tcustomer.id})
+  </insert>
+</mapper>

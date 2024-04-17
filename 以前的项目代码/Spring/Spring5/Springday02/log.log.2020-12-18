@@ -1,0 +1,13 @@
+2020-12-18 15:59:03  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@591f989e
+2020-12-18 15:59:05  [ main:1382 ] - [ DEBUG ]  Loaded 6 bean definitions from class path resource [applicationContext.xml]
+2020-12-18 15:59:05  [ main:1589 ] - [ DEBUG ]  Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2020-12-18 15:59:05  [ main:1826 ] - [ DEBUG ]  Creating shared instance of singleton bean 'userService'
+2020-12-18 15:59:05  [ main:1827 ] - [ DEBUG ]  Creating shared instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2020-12-18 15:59:06  [ main:2591 ] - [ DEBUG ]  Creating shared instance of singleton bean 'around'
+2020-12-18 15:59:06  [ main:2661 ] - [ DEBUG ]  Creating shared instance of singleton bean 'orderService'
+2020-12-18 17:15:07  [ main:0 ] - [ DEBUG ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@591f989e
+2020-12-18 17:15:08  [ main:1038 ] - [ DEBUG ]  Loaded 3 bean definitions from class path resource [applicationContext1.xml]
+2020-12-18 17:15:08  [ main:1193 ] - [ DEBUG ]  Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2020-12-18 17:15:09  [ main:1668 ] - [ DEBUG ]  Creating shared instance of singleton bean 'userService'
+2020-12-18 17:15:09  [ main:1939 ] - [ DEBUG ]  Found AspectJ method: public java.lang.Object com.zlq.Aspect.MyAspect.around(org.aspectj.lang.ProceedingJoinPoint) throws java.lang.Throwable
+2020-12-18 17:15:10  [ main:2581 ] - [ DEBUG ]  Creating shared instance of singleton bean 'around'

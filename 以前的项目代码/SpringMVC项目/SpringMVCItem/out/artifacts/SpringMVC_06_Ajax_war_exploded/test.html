@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ifream测试体验页面无刷新</title>
+    <script>
+        function go(){
+            var url=document.getElementById("url").value;
+            document.getElementById("iframe").src=url;
+        }
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" id="url" value="https://www.baidu.com/?tn=62095104_19_oem_dg">
+    <input type="button" value="提交" onclick="go()">
+</div>
+<div>
+    <iframe id="iframe" style="width: 100%;height: 500px">
+    </iframe>
+</div>
+</body>
+</html>
